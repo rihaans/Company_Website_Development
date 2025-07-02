@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baab Advertising</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Firebase (Firestore + App) -->
+    <script defer src="/__/firebase/11.9.1/firebase-app-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/11.9.1/firebase-firestore-compat.js"
+    ></script>
+    <script defer src="/__/firebase/init.js?useEmulator=false"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header-wrapper">
+      <div class="header-pill" id="headerPill">
+        <!-- Logo Pill -->
+        <div class="logo-pill">
+          <img src="images/logo.png" alt="Baab Logo" />
+        </div>
+
+        <span class="brand-title">baab</span>
+
+        <!-- Menu Button -->
+        <button id="menuButton" class="menu-button">Menu</button>
+
+        <!-- Pill Menu -->
+        <div class="pill-menu" id="pillMenu">
+          <a href="#about">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="works.html">Our Work</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+
+        <!-- Close Button (at end) -->
+        <button id="closeButton" class="close-button">×</button>
+      </div>
+    </header>
+
+    <!-- Work Section -->
+    <section class="work-section">
+      <div class="work-intro">
+        <h2>Work</h2>
+        <p class="lead">
+          Baab offers high calibre graphic design solutions, which will enhance
+          your corporate image and increase the impact of your marketing
+          campaigns.
+          <br />
+          <br />
+          Design is our passion – and our design work will portray your products
+          or services in a memorable way. From the creation of a new logo to
+          printed marketing brochures, flyers, adverts, 3D visuals or a web
+          presence – we can assist you. We work hand in hand.
+        </p>
+      </div>
+
+      <div class="work-grid" id="work-grid">
+        <!-- JS inserts work boxes here -->
+      </div>
+
+      <!-- Phone Verification Popup -->
+      <div id="verify-popup" class="popup hidden">
+        <div class="popup-content">
+          <button class="popup-close" onclick="closeVerifyPopup()">×</button>
+          <h3>Enter Your Phone Number</h3>
+          <input type="text" id="phone-number" placeholder="+9715XXXXXXX" />
+          <div id="recaptcha-container"></div>
+          <button onclick="sendOTP()">Send OTP</button>
+
+          <input
+            type="text"
+            id="otp-code"
+            placeholder="Enter OTP"
+            class="hidden"
+          />
+          <button onclick="verifyOTP()" class="hidden" id="verify-btn">
+            Verify
+          </button>
+        </div>
+      </div>
+
+      <!-- PDF Viewer Popup -->
+      <div id="pdf-popup" class="popup hidden">
+        <div class="pdf-popup-content">
+          <button class="popup-close" onclick="closePDF()">×</button>
+          <iframe id="pdf-viewer" src="" frameborder="0"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="footer-heading">
+          Baab is a new generation design agency specializing in brand identity,
+          visual identity, holistic brand experiences and print implementation.
+        </p>
+
+        <div class="footer-grid">
+          <!-- SHARJAH -->
+          <div class="footer-column">
+            <h3 class="footer-title">SHARJAH</h3>
+            <ul class="footer-list">
+              <li>King Abdul Azeez Road</li>
+              <li>P.O. Box: 21279</li>
+              <li>Sharjah - UAE</li>
+              <li><a href="#" class="footer-link">Map</a></li>
+            </ul>
+          </div>
+
+          <!-- GET IN TOUCH -->
+          <div class="footer-column">
+            <h3 class="footer-title">GET IN TOUCH</h3>
+            <ul class="footer-list">
+              <li>+971 (0) 6 525 9933</li>
+              <li>+971 50 308 5306</li>
+              <li>
+                <a href="mailto:baabme@gmail.com" class="footer-link"
+                  >baabme@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- SOCIAL -->
+          <div class="footer-column">
+            <h3 class="footer-title">SOCIAL</h3>
+            <ul class="footer-list">
+              <li><a href="#" class="footer-link">Linkedin</a></li>
+              <li><a href="#" class="footer-link">Behance</a></li>
+              <li><a href="#" class="footer-link">Instagram</a></li>
+              <li><a href="#" class="footer-link">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          ©2021 Baab Advertising All Rights Reserved
+        </div>
+      </div>
+    </footer>
+
+    <!-- Your original script (menu, scroll, form) -->
+    <script src="js/script.js"></script>
+
+    <!-- New script for OTP/PDF work -->
+    <script type="module" src="js/work.js"></script>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Baab</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Firebase SDKs -->
+    <script defer src="/__/firebase/11.9.1/firebase-app-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/11.9.1/firebase-firestore-compat.js"
+    ></script>
+    <script defer src="/__/firebase/init.js?useEmulator=false"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header-wrapper">
+      <div class="header-pill" id="headerPill">
+        <!-- Logo Pill -->
+        <div class="logo-pill">
+          <img src="images/logo.png" alt="Baab Logo" />
+        </div>
+
+        <span class="brand-title">baab</span>
+
+        <!-- Menu Button -->
+        <button id="menuButton" class="menu-button">Menu</button>
+
+        <!-- Pill Menu -->
+        <div class="pill-menu" id="pillMenu">
+          <a href="#about">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="works.html">Our Work</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+
+        <!-- Close Button (at end) -->
+        <button id="closeButton" class="close-button">×</button>
+      </div>
+    </header>
+
+    <!-- CONTACT SECTION -->
+    <section class="about-section" style="padding-top: 120px">
+      <div class="content-wrapper">
+        <h2>We are available round the clock.</h2>
+        <p class="lead">To collaborate or discuss a project please reach us</p>
+
+        <div
+          style="display: flex; flex-wrap: wrap; gap: 60px; margin-top: 40px"
+        >
+          <!-- LEFT: Address -->
+          <div style="flex: 1 1 300px">
+            <h3 style="font-size: 24px"><strong>Sharjah</strong></h3>
+            <p class="lead">
+              Offices 2013,<br />
+              Building A5-D,<br />
+              Dubai Digital Park,<br />
+              Dubai Silicon Oasis,<br />
+              POBox 341887,<br />
+              Dubai - UAE.
+            </p>
+          </div>
+
+          <!-- RIGHT: Form -->
+          <form
+            id="contactForm"
+            style="
+              flex: 1 1 500px;
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+            "
+          >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <input type="text" id="phone" name="phone" placeholder="Phone" />
+            <textarea
+              name="message"
+              placeholder="Message"
+              rows="4"
+              required
+            ></textarea>
+            <button type="submit"><strong>Send</strong></button>
+            <span id="status"></span>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="footer-heading">
+          Baab is a new generation design agency specializing in brand identity,
+          visual identity, holistic brand experiences and print implementation.
+        </p>
+
+        <div class="footer-grid">
+          <!-- SHARJAH -->
+          <div class="footer-column">
+            <h3 class="footer-title">SHARJAH</h3>
+            <ul class="footer-list">
+              <li>King Abdul Azeez Road</li>
+              <li>P.O. Box: 21279</li>
+              <li>Sharjah - UAE</li>
+              <li><a href="#" class="footer-link">Map</a></li>
+            </ul>
+          </div>
+
+          <!-- GET IN TOUCH -->
+          <div class="footer-column">
+            <h3 class="footer-title">GET IN TOUCH</h3>
+            <ul class="footer-list">
+              <li>+971 (0) 6 525 9933</li>
+              <li>+971 50 308 5306</li>
+              <li>
+                <a href="mailto:baabme@gmail.com" class="footer-link"
+                  >baabme@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- SOCIAL -->
+          <div class="footer-column">
+            <h3 class="footer-title">SOCIAL</h3>
+            <ul class="footer-list">
+              <li><a href="#" class="footer-link">Linkedin</a></li>
+              <li><a href="#" class="footer-link">Behance</a></li>
+              <li><a href="#" class="footer-link">Instagram</a></li>
+              <li><a href="#" class="footer-link">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          ©2021 Baab Advertising All Rights Reserved
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

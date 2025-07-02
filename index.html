@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baab Advertising</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Include only Firebase features you plan to use -->
+    <script defer src="/__/firebase/11.9.1/firebase-app-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/11.9.1/firebase-firestore-compat.js"
+    ></script>
+    <script defer src="/__/firebase/init.js?useEmulator=false"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header-wrapper">
+      <div class="header-pill" id="headerPill">
+        <!-- Logo Pill -->
+        <div class="logo-pill">
+          <img src="images/logo.png" alt="Baab Logo" />
+        </div>
+
+        <span class="brand-title">baab</span>
+
+        <!-- Menu Button -->
+        <button id="menuButton" class="menu-button">Menu</button>
+
+        <!-- Pill Menu -->
+        <div class="pill-menu" id="pillMenu">
+          <a href="#about">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="works.html">Our Work</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+
+        <!-- Close Button (at end) -->
+        <button id="closeButton" class="close-button">×</button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+
+    <!-- About Section (id="about") -->
+    <section class="about-section">
+      <div class="content-wrapper">
+        <h2>Who We Are</h2>
+        <p class="lead">
+          Baab offers high calibre graphic design solutions, which will enhance
+          your corporate image and increase the impact of your marketing
+          campaigns.
+          <br />
+          <br />
+          From logos and brochures to 3D visuals and digital assets, we bring
+          design to life with clarity and purpose. Our team works closely with
+          startups and multinational firms alike—because in a visually driven
+          world, strong branding is everything.
+        </p>
+      </div>
+      <hr class="divider" />
+      <div class="content-wrapper">
+        <h2>What Sets Us Apart</h2>
+        <p class="lead">
+          Design isn’t just what we do—it’s who we are. At Baab, every project
+          is a fusion of aesthetic excellence and business insight. We don’t
+          just design to impress; we design to perform.
+          <br />
+          <br />
+          Our edge lies in our ability to translate your brand essence into
+          compelling visuals that resonate. Whether it’s a full campaign rollout
+          or a single powerful logo, we deliver standout results that make
+          lasting impressions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services (names only)  -->
+    <section class="services-section">
+      <div class="content-wrapper">
+        <div class="services-title">
+          <h2>Our services</h2>
+        </div>
+      </div>
+      <div class="services-grid">
+        <div
+          class="service-box"
+          style="background-image: url('images/service1.png')"
+        >
+          <div class="service-text">Design & Creations</div>
+        </div>
+        <div
+          class="service-box"
+          style="background-image: url('images/service2.png')"
+        >
+          <div class="service-text">Print & Publishing</div>
+        </div>
+        <div
+          class="service-box"
+          style="background-image: url('images/service3.png')"
+        >
+          <div class="service-text">Packaging & Labelling</div>
+        </div>
+        <div
+          class="service-box"
+          style="background-image: url('images/service4.png')"
+        >
+          <div class="service-text">Branding & Promotions</div>
+        </div>
+        <div
+          class="service-box"
+          style="background-image: url('images/service5.png')"
+        >
+          <div class="service-text">Advertising & Signage</div>
+        </div>
+        <div
+          class="service-box"
+          style="background-image: url('images/service6.png')"
+        >
+          <div class="service-text">Gifts & Premium</div>
+        </div>
+        <div
+          class="service-box"
+          style="background-image: url('images/service7.png')"
+        >
+          <div class="service-text">Framing & Canvas</div>
+        </div>
+        <div
+          class="service-box"
+          style="background-image: url('images/service8.png')"
+        >
+          <div class="service-text">Carpet & Curtains</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients Section  -->
+    <section class="clients-showcase">
+      <div class="clients-container">
+        <h2>Clients</h2>
+        <p class="lead">
+          Baab offers high calibre graphic design solutions, which will enhance
+          your corporate image and increase the impact of your marketing
+          campaigns.
+        </p>
+      </div>
+
+      <div class="clients-grid">
+        <!-- Client logos -->
+        <div class="client-box">
+          <img src="images/client1.png" alt="Client 1" />
+        </div>
+        <div class="client-box">
+          <img src="images/client1.png" alt="Client 2" />
+        </div>
+        <div class="client-box">
+          <img src="images/client1.png" alt="Client 3" />
+        </div>
+        <div class="client-box">
+          <img src="images/client1.png" alt="Client 4" />
+        </div>
+        <div class="client-box">
+          <img src="images/client1.png" alt="Client 5" />
+        </div>
+        <div class="client-box">
+          <img src="images/client1.png" alt="Client 6" />
+        </div>
+        <div class="client-box">
+          <img src="images/client1.png" alt="Client 7" />
+        </div>
+        <div class="client-box">
+          <img src="images/client1.png" alt="Client 8" />
+        </div>
+        <div class="client-box">
+          <img src="images/client1.png" alt="Client 1" />
+        </div>
+        <div class="client-box">
+          <img src="images/client1.png" alt="Client 2" />
+        </div>
+        <div class="client-box">
+          <img src="images/client1.png" alt="Client 3" />
+        </div>
+        <div class="client-box">
+          <img src="images/client1.png" alt="Client 4" />
+        </div>
+        <div class="client-box">
+          <img src="images/client1.png" alt="Client 5" />
+        </div>
+        <div class="client-box">
+          <img src="images/client1.png" alt="Client 6" />
+        </div>
+        <div class="client-box">
+          <img src="images/client1.png" alt="Client 7" />
+        </div>
+        <div class="client-box">
+          <img src="images/client1.png" alt="Client 8" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section (id="contact") -->
+    <section class="contact-prompt">
+      <hr class="divider" />
+      <div class="content-wrapper">
+        <p class="idea">
+          Have an idea you think <br />
+          we could help with?
+        </p>
+        <p class="contact"><strong>Get in touch.</strong></p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="footer-heading">
+          Baab is a new generation design agency specializing in brand identity,
+          visual identity, holistic brand experiences and print implementation.
+        </p>
+
+        <div class="footer-grid">
+          <!-- SHARJAH -->
+          <div class="footer-column">
+            <h3 class="footer-title">SHARJAH</h3>
+            <ul class="footer-list">
+              <li>King Abdul Azeez Road</li>
+              <li>P.O. Box: 21279</li>
+              <li>Sharjah - UAE</li>
+              <li><a href="#" class="footer-link">Map</a></li>
+            </ul>
+          </div>
+
+          <!-- GET IN TOUCH -->
+          <div class="footer-column">
+            <h3 class="footer-title">GET IN TOUCH</h3>
+            <ul class="footer-list">
+              <li>+971 (0) 6 525 9933</li>
+              <li>+971 50 308 5306</li>
+              <li>
+                <a href="mailto:baabme@gmail.com" class="footer-link"
+                  >baabme@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- SOCIAL -->
+          <div class="footer-column">
+            <h3 class="footer-title">SOCIAL</h3>
+            <ul class="footer-list">
+              <li><a href="#" class="footer-link">Linkedin</a></li>
+              <li><a href="#" class="footer-link">Behance</a></li>
+              <li><a href="#" class="footer-link">Instagram</a></li>
+              <li><a href="#" class="footer-link">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          ©2021 Baab Advertising All Rights Reserved
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
