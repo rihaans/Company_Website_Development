@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Services | Baab Advertising</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    
     <!-- Header -->
-    <header class="modern-header">
-      <div class="modern-container">
-        <!-- Left: Logo & Brand -->
+    <header class="floating-header" id="floatingHeader">
+      <div class="header-container">
+        <!-- Brand -->
         <div class="brand-wrapper">
           <img src="images/logo.png" alt="Baab Logo" class="brand-logo" />
           <span class="brand-name">baab</span>
         </div>
 
-        <!-- Right: Nav Menu -->
+        <!-- Nav Links -->
         <nav class="nav-links" id="navLinks">
           <a href="index.html">About Us</a>
           <a href="services.html">Services</a>
@@ -27,42 +31,54 @@
 
         <!-- Hamburger -->
         <button class="hamburger" id="hamburger">
-          <span></span><span></span><span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
     </header>
 
+    <!-- Backdrop for mobile -->
+    <div class="mobile-backdrop hidden" id="mobileBackdrop"></div>
+
     <!-- Services Detail Section -->
-  <div class="services-container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <ul id="serviceList">
-        <li data-service="0">Design & Creations</li>
-        <li data-service="1">Print & Publishing</li>
-        <li data-service="2">Packaging & Labelling</li>
-        <li data-service="3">Branding & Promotions</li>
-        <li data-service="4">Advertising & Signage</li>
-        <li data-service="5">Gifts & Premium</li>
-        <li data-service="6">Framing & Canvas</li>
-        <li data-service="7">Carpet & Curtains</li>
-      </ul>
-    </aside>
+    <div class="services-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <ul id="serviceList">
+          <li data-service="0">Design & Creations</li>
+          <li data-service="1">Print & Publishing</li>
+          <li data-service="2">Packaging & Labelling</li>
+          <li data-service="3">Branding & Promotions</li>
+          <li data-service="4">Advertising & Signage</li>
+          <li data-service="5">Gifts & Premium</li>
+          <li data-service="6">Framing & Canvas</li>
+          <li data-service="7">Carpet & Curtains</li>
+        </ul>
+      </aside>
 
-    <!-- Main Content -->
-    <main class="service-content" id="mainContent">
-      <h1 id="serviceTitle">Design & Creations</h1>
-      <p id="serviceDescription">We deliver high-impact design solutions...</p>
-      <img id="mainImage" src="images/design.jpg" alt="Service Visual" class="main-img"/>
-    </main>
-  </div>
-
-  <!-- Modal for Gallery -->
-  <div class="modal hidden" id="imageModal">
-    <button class="close-btn" id="closeModal">✕</button>
-    <div class="modal-gallery" id="galleryContainer">
-      <!-- Injected images here -->
+      <!-- Main Content -->
+      <main class="service-content" id="mainContent">
+        <h1 id="serviceTitle">Design & Creations</h1>
+        <p id="serviceDescription">
+          We deliver high-impact design solutions...
+        </p>
+        <img
+          id="mainImage"
+          src="images/design.jpg"
+          alt="Service Visual"
+          class="main-img"
+        />
+      </main>
     </div>
-  </div>
+
+    <!-- Modal for Gallery -->
+    <div class="modal hidden" id="imageModal">
+      <button class="close-btn" id="closeModal">✕</button>
+      <div class="modal-gallery" id="galleryContainer">
+        <!-- Injected images here -->
+      </div>
+    </div>
 
     <!-- Contact Prompt -->
     <section class="contact-prompt">

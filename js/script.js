@@ -1,8 +1,23 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   // === HERO TITLE ANIMATION ===
   const spans = document.querySelectorAll(".hero-title span");
   spans.forEach((span, index) => {
     span.style.animationDelay = `${index * 0.05}s`;
+  });
+
+  
+  // === HEADER SHOW/HIDE ON SCROLL ===
+  const header = document.getElementById("floatingHeader");
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll > lastScrollY && currentScroll > 100) {
+      header.style.top = "-100px";
+    } else {
+      header.style.top = "10px";
+    }
+    lastScrollY = currentScroll;
   });
 
   // === MOBILE MENU TOGGLE ===
@@ -10,19 +25,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.getElementById("navLinks");
   const backdrop = document.getElementById("mobileBackdrop");
 
-  hamburger?.addEventListener("click", () => {
-    navLinks?.classList.toggle("open");
-    backdrop?.classList.toggle("hidden");
-  });
+  if (hamburger && navLinks && backdrop) {
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+      backdrop.classList.toggle("hidden");
+    });
 
-  backdrop?.addEventListener("click", () => {
-    navLinks?.classList.remove("open");
-    backdrop?.classList.add("hidden");
-  });
+    backdrop.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      backdrop.classList.add("hidden");
+    });
+  }
 
   // === CLIENT LOGO FADE-IN ===
   const boxes = document.querySelectorAll(".client-box");
-  if ("IntersectionObserver" in window) {
+  if ("IntersectionObserver" in window && boxes.length > 0) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -31,14 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       },
-      {
-        threshold: 0.2,
-      }
+      { threshold: 0.2 }
     );
     boxes.forEach((box) => observer.observe(box));
-  } else {
-    // Fallback
-    boxes.forEach((box) => box.classList.add("visible"));
   }
 
   // === CONTACT FORM FIREBASE HANDLING ===
@@ -105,107 +117,116 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-  const services = [
-    {
-      title: "Design & Creations",
-      desc: "We deliver high-impact design solutions that shape brand identity...",
-      mainImg: "images/designcreations.png",
-      gallery: ["/images/Advertising and signage/1.png", "/images/Advertising and signage/2.png","/images/Advertising and signage/3.png","/images/Advertising and signage/4.png"],
-    },
-    {
-      title: "Print & Publishing",
-      desc: "Your ideas on paper – fast, premium, and stunning.",
-      mainImg: "images/print.jpg",
-      gallery: ["images/print1.jpg", "images/print2.jpg"],
-    },
-    {
-      title: "Packaging & Labelling",
-      desc: "Creative packaging that stands out on the shelf.",
-      mainImg: "images/package.jpg",
-      gallery: ["images/package1.jpg", "images/package2.jpg"],
-    },
-    {
-      title: "Branding & Promotions",
-      desc: "Boost your presence with powerful branding.",
-      mainImg: "images/branding.jpg",
-      gallery: ["images/branding1.jpg", "images/branding2.jpg"],
-    },
-    {
-      title: "Advertising & Signage",
-      desc: "Visual impact, outdoor and indoor signage that works.",
-      mainImg: "images/signage.jpg",
-      gallery: ["images/signage1.jpg", "images/signage2.jpg"],
-    },
-    {
-      title: "Gifts & Premium",
-      desc: "Corporate gifts and branded merchandise to remember.",
-      mainImg: "images/gifts.jpg",
-      gallery: ["images/gifts1.jpg", "images/gifts2.jpg"],
-    },
-    {
-      title: "Framing & Canvas",
-      desc: "High-quality framing and elegant canvas prints.",
-      mainImg: "images/canvas.jpg",
-      gallery: ["images/canvas1.jpg", "images/canvas2.jpg"],
-    },
-    {
-      title: "Carpet & Curtains",
-      desc: "Custom carpet and curtain solutions tailored to your space.",
-      mainImg: "images/carpet.jpg",
-      gallery: ["images/carpet1.jpg", "images/carpet2.jpg"],
-    },
-  ];
-
-  const listItems = document.querySelectorAll("#serviceList li");
-  const title = document.getElementById("serviceTitle");
-  const desc = document.getElementById("serviceDescription");
+  // === SERVICES PAGE FUNCTIONALITY ===
+  const serviceTitle = document.getElementById("serviceTitle");
+  const serviceDescription = document.getElementById("serviceDescription");
   const mainImage = document.getElementById("mainImage");
-  const modal = document.getElementById("imageModal");
   const galleryContainer = document.getElementById("galleryContainer");
   const closeModal = document.getElementById("closeModal");
+  const imageModal = document.getElementById("imageModal");
+  const serviceList = document.querySelectorAll("#serviceList li");
 
-  let currentIndex = 0;
+  if (serviceTitle && serviceDescription && mainImage && galleryContainer) {
+    const services = [
+      {
+        title: "Design & Creations",
+        desc: "We deliver high-impact design solutions that shape brand identity...",
+        mainImg: "images/designcreations.png",
+        gallery: [
+          "images/Advertising and signage/1.png",
+          "images/Advertising and signage/2.png",
+          "images/Advertising and signage/3.png",
+          "images/Advertising and signage/4.png",
+        ],
+      },
+      {
+        title: "Print & Publishing",
+        desc: "Your ideas on paper – fast, premium, and stunning.",
+        mainImg: "images/print.jpg",
+        gallery: ["images/print1.jpg", "images/print2.jpg"],
+      },
+      {
+        title: "Packaging & Labelling",
+        desc: "Creative packaging that stands out on the shelf.",
+        mainImg: "images/package.jpg",
+        gallery: ["images/package1.jpg", "images/package2.jpg"],
+      },
+      {
+        title: "Branding & Promotions",
+        desc: "Boost your presence with powerful branding.",
+        mainImg: "images/branding.jpg",
+        gallery: ["images/branding1.jpg", "images/branding2.jpg"],
+      },
+      {
+        title: "Advertising & Signage",
+        desc: "Visual impact, outdoor and indoor signage that works.",
+        mainImg: "images/signage.jpg",
+        gallery: ["images/signage1.jpg", "images/signage2.jpg"],
+      },
+      {
+        title: "Gifts & Premium",
+        desc: "Corporate gifts and branded merchandise to remember.",
+        mainImg: "images/gifts.jpg",
+        gallery: ["images/gifts1.jpg", "images/gifts2.jpg"],
+      },
+      {
+        title: "Framing & Canvas",
+        desc: "High-quality framing and elegant canvas prints.",
+        mainImg: "images/canvas.jpg",
+        gallery: ["images/canvas1.jpg", "images/canvas2.jpg"],
+      },
+      {
+        title: "Carpet & Curtains",
+        desc: "Custom carpet and curtain solutions tailored to your space.",
+        mainImg: "images/carpet.jpg",
+        gallery: ["images/carpet1.jpg", "images/carpet2.jpg"],
+      },
+    ];
 
-  function updateService(index) {
-    const s = services[index];
-    title.textContent = s.title;
-    desc.textContent = s.desc;
-    mainImage.src = s.mainImg;
-    currentIndex = index;
-    listItems.forEach((item) => item.classList.remove("active"));
-    listItems[index].classList.add("active");
-  }
+    let currentIndex = 0;
 
-  listItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      const index = parseInt(item.dataset.service);
-      updateService(index);
+    function updateService(index) {
+      const s = services[index];
+      serviceTitle.textContent = s.title;
+      serviceDescription.textContent = s.desc;
+      mainImage.src = s.mainImg;
+      currentIndex = index;
+
+      serviceList.forEach((li) => li.classList.remove("active"));
+      serviceList[index].classList.add("active");
+    }
+
+    serviceList.forEach((item) => {
+      item.addEventListener("click", () => {
+        const index = parseInt(item.dataset.service);
+        updateService(index);
+      });
     });
-  });
 
-  mainImage.addEventListener("click", () => {
-    const galleryImgs = services[currentIndex].gallery
-      .map((src) => `<img src="${src}" alt="Gallery Image">`)
-      .join("");
-    galleryContainer.innerHTML = galleryImgs;
-    modal.classList.remove("hidden");
-  });
+    mainImage.addEventListener("click", () => {
+      const galleryImgs = services[currentIndex].gallery
+        .map((src) => `<img src="${src}" alt="Gallery Image">`)
+        .join("");
+      galleryContainer.innerHTML = galleryImgs;
+      imageModal.classList.remove("hidden");
+    });
 
-  closeModal.addEventListener("click", () => {
-    modal.classList.add("hidden");
-  });
+    closeModal?.addEventListener("click", () => {
+      imageModal.classList.add("hidden");
+    });
 
-  // Initial load
-// === INITIAL LOAD BASED ON URL PARAMETER ===
-const urlParams = new URLSearchParams(window.location.search);
-const indexFromURL = parseInt(urlParams.get("service"));
-
-if (!isNaN(indexFromURL) && indexFromURL >= 0 && indexFromURL < services.length) {
-  updateService(indexFromURL);
-} else {
-  updateService(0); // default to first service
-}
+    // Load from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const indexFromURL = parseInt(urlParams.get("service"));
+    if (
+      !isNaN(indexFromURL) &&
+      indexFromURL >= 0 &&
+      indexFromURL < services.length
+    ) {
+      updateService(indexFromURL);
+    } else {
+      updateService(0);
+    }
+  }
 });
