@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Services | Baab Advertising</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Header -->
@@ -18,7 +19,7 @@
 
         <!-- Right: Nav Menu -->
         <nav class="nav-links" id="navLinks">
-          <a href="#about">About Us</a>
+          <a href="index.html">About Us</a>
           <a href="services.html">Services</a>
           <a href="works.html">Works</a>
           <a href="contact.html">Contact Us</a>
@@ -32,164 +33,36 @@
     </header>
 
     <!-- Services Detail Section -->
-    <section class="services-detail-section">
-      <div class="service-item vertical">
-        <div class="content-wrapper">
-          <div class="service-content">
-            <h2>Design and Creations</h2>
-            <p class="lead">
-              We deliver high-impact design solutions that shape brand identity
-              and elevate your presence across every touchpoint—from logos to 3D
-              visuals.
-              <br />
-              Whether you are a start-up or an enterprise, our creative team
-              crafts visuals that resonate and leave lasting impressions.
-            </p>
-          </div>
-        </div>
-        <img
-          src="images/designcreations.png"
-          alt="Design & Creation"
-          class="service-image full"
-        />
-      </div>
-      <div class="service-item vertical">
-        <div class="content-wrapper">
-          <div class="service-content">
-            <h2>Printing and Publishing</h2>
-            <p class="lead">
-              We bring your ideas to print—from premium brochures and catalogs
-              to flyers and packaging—produced with precision and purpose.
-              <br />
-              Every print output we deliver enhances your message with
-              outstanding finish and alignment to your brand's voice.
-            </p>
-          </div>
-        </div>
-        <img
-          src="images/printingpublishing.png"
-          alt="Print & Publishing"
-          class="service-image full"
-        />
-      </div>
-      <div class="service-item vertical">
-        <div class="content-wrapper">
-          <div class="service-content">
-            <h2>Gift and Premium</h2>
-            <p class="lead">
-              We bring your ideas to print—from premium brochures and catalogs
-              to flyers and packaging—produced with precision and purpose.
-              <br />
-              Every print output we deliver enhances your message with
-              outstanding finish and alignment to your brand's voice.
-            </p>
-          </div>
-        </div>
-        <img
-          src="images/giftpremium.png"
-          alt="Print & Publishing"
-          class="service-image full"
-        />
-      </div>
-      <div class="service-item vertical">
-        <div class="content-wrapper">
-          <div class="service-content">
-            <h2>Branding and Promotions</h2>
-            <p class="lead">
-              We deliver high-impact design solutions that shape brand identity
-              and elevate your presence across every touchpoint—from logos to 3D
-              visuals.
-              <br />
-              Whether you are a start-up or an enterprise, our creative team
-              crafts visuals that resonate and leave lasting impressions.
-            </p>
-          </div>
-        </div>
-        <img
-          src="images/brandingpromotion.png"
-          alt="Design & Creation"
-          class="service-image full"
-        />
-      </div>
-      <div class="service-item vertical">
-        <div class="content-wrapper">
-          <div class="service-content">
-            <h2>Advertising and Signage</h2>
-            <p class="lead">
-              We deliver high-impact design solutions that shape brand identity
-              and elevate your presence across every touchpoint—from logos to 3D
-              visuals.
-              <br />
-              Whether you are a start-up or an enterprise, our creative team
-              crafts visuals that resonate and leave lasting impressions.
-            </p>
-          </div>
-        </div>
-        <img
-          src="images/advertisingsignage.png"
-          alt="Design & Creation"
-          class="service-image full"
-        />
-      </div>
-      <div class="service-item vertical">
-        <div class="content-wrapper">
-          <div class="service-content">
-            <h2>Framing and Canvas</h2>
-            <p class="lead">
-              We bring your ideas to print—from premium brochures and catalogs
-              to flyers and packaging—produced with precision and purpose.
-              <br />
-              Every print output we deliver enhances your message with
-              outstanding finish and alignment to your brand's voice.
-            </p>
-          </div>
-        </div>
-        <img
-          src="images/framingcanvas.png"
-          alt="Print & Publishing"
-          class="service-image full"
-        />
-      </div>
-      <div class="service-item vertical">
-        <div class="content-wrapper">
-          <div class="service-content">
-            <h2>Carpet and Curtains</h2>
-            <p class="lead">
-              We bring your ideas to print—from premium brochures and catalogs
-              to flyers and packaging—produced with precision and purpose.
-              <br />
-              Every print output we deliver enhances your message with
-              outstanding finish and alignment to your brand's voice.
-            </p>
-          </div>
-        </div>
-        <img
-          src="images/carpetcurtains.png"
-          alt="Print & Publishing"
-          class="service-image full"
-        />
-      </div>
-      <div class="service-item vertical">
-        <div class="content-wrapper">
-          <div class="service-content">
-            <h2>Packaging and Labelling</h2>
-            <p class="lead">
-              We deliver high-impact design solutions that shape brand identity
-              and elevate your presence across every touchpoint—from logos to 3D
-              visuals.
-              <br />
-              Whether you are a start-up or an enterprise, our creative team
-              crafts visuals that resonate and leave lasting impressions.
-            </p>
-          </div>
-        </div>
-        <img
-          src="images/packaginglabelling.png"
-          alt="Design & Creation"
-          class="service-image full"
-        />
-      </div>
-    </section>
+  <div class="services-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul id="serviceList">
+        <li data-service="0">Design & Creations</li>
+        <li data-service="1">Print & Publishing</li>
+        <li data-service="2">Packaging & Labelling</li>
+        <li data-service="3">Branding & Promotions</li>
+        <li data-service="4">Advertising & Signage</li>
+        <li data-service="5">Gifts & Premium</li>
+        <li data-service="6">Framing & Canvas</li>
+        <li data-service="7">Carpet & Curtains</li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="service-content" id="mainContent">
+      <h1 id="serviceTitle">Design & Creations</h1>
+      <p id="serviceDescription">We deliver high-impact design solutions...</p>
+      <img id="mainImage" src="images/design.jpg" alt="Service Visual" class="main-img"/>
+    </main>
+  </div>
+
+  <!-- Modal for Gallery -->
+  <div class="modal hidden" id="imageModal">
+    <button class="close-btn" id="closeModal">✕</button>
+    <div class="modal-gallery" id="galleryContainer">
+      <!-- Injected images here -->
+    </div>
+  </div>
 
     <!-- Contact Prompt -->
     <section class="contact-prompt">

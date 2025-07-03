@@ -5,13 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - Baab</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- Firebase SDKs -->
-    <script defer src="/__/firebase/11.9.1/firebase-app-compat.js"></script>
-    <script
-      defer
-      src="/__/firebase/11.9.1/firebase-firestore-compat.js"
-    ></script>
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <!-- Firebase Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyDer--SLSZbjinReOKPPG_U77PmfbCnmkU",
+        authDomain: "baabme-96b1d.firebaseapp.com",
+        databaseURL: "https://baabme-96b1d-default-rtdb.firebaseio.com",
+        projectId: "baabme-96b1d",
+        storageBucket: "baabme-96b1d.firebasestorage.app",
+        messagingSenderId: "615856666101",
+        appId: "1:615856666101:web:4dc78c47f927bc186a1cbc",
+        measurementId: "G-8Q30W1KFJP",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
     <script defer src="/__/firebase/init.js?useEmulator=false"></script>
   </head>
   <body>
@@ -26,7 +42,7 @@
 
         <!-- Right: Nav Menu -->
         <nav class="nav-links" id="navLinks">
-          <a href="#about">About Us</a>
+          <a href="index.html">About Us</a>
           <a href="services.html">Services</a>
           <a href="works.html">Works</a>
           <a href="contact.html">Contact Us</a>
