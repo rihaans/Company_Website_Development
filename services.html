@@ -8,28 +8,26 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header-wrapper">
-      <div class="header-pill" id="headerPill">
-        <!-- Logo Pill -->
-        <div class="logo-pill">
-          <img src="images/logo.png" alt="Baab Logo" />
+    <header class="modern-header">
+      <div class="modern-container">
+        <!-- Left: Logo & Brand -->
+        <div class="brand-wrapper">
+          <img src="images/logo.png" alt="Baab Logo" class="brand-logo" />
+          <span class="brand-name">baab</span>
         </div>
 
-        <span class="brand-title">baab</span>
-
-        <!-- Menu Button -->
-        <button id="menuButton" class="menu-button">Menu</button>
-
-        <!-- Pill Menu -->
-        <div class="pill-menu" id="pillMenu">
+        <!-- Right: Nav Menu -->
+        <nav class="nav-links" id="navLinks">
           <a href="#about">About Us</a>
           <a href="services.html">Services</a>
-          <a href="works.html">Our Work</a>
+          <a href="works.html">Works</a>
           <a href="contact.html">Contact Us</a>
-        </div>
+        </nav>
 
-        <!-- Close Button (at end) -->
-        <button id="closeButton" class="close-button">×</button>
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </header>
 
@@ -201,7 +199,9 @@
           Have an idea you think <br />
           we could help with?
         </p>
-        <p class="contact"><strong>Get in touch.</strong></p>
+        <a href="contact.html" class="contact"
+          ><strong>Get in touch.</strong></a
+        >
       </div>
     </section>
 

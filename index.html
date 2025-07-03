@@ -13,36 +13,47 @@
       src="/__/firebase/11.9.1/firebase-firestore-compat.js"
     ></script>
     <script defer src="/__/firebase/init.js?useEmulator=false"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.15/bundled/lenis.min.js"></script>
   </head>
   <body>
     <!-- Header -->
-    <header class="header-wrapper">
-      <div class="header-pill" id="headerPill">
-        <!-- Logo Pill -->
-        <div class="logo-pill">
-          <img src="images/logo.png" alt="Baab Logo" />
+    <header class="modern-header">
+      <div class="modern-container">
+        <!-- Left: Logo & Brand -->
+        <div class="brand-wrapper">
+          <img src="images/logo.png" alt="Baab Logo" class="brand-logo" />
+          <span class="brand-name">baab</span>
         </div>
 
-        <span class="brand-title">baab</span>
-
-        <!-- Menu Button -->
-        <button id="menuButton" class="menu-button">Menu</button>
-
-        <!-- Pill Menu -->
-        <div class="pill-menu" id="pillMenu">
+        <!-- Right: Nav Menu -->
+        <nav class="nav-links" id="navLinks">
           <a href="#about">About Us</a>
           <a href="services.html">Services</a>
-          <a href="works.html">Our Work</a>
+          <a href="works.html">Works</a>
           <a href="contact.html">Contact Us</a>
-        </div>
+        </nav>
 
-        <!-- Close Button (at end) -->
-        <button id="closeButton" class="close-button">×</button>
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </header>
 
     <!-- Hero Section -->
-
+    <section class="hero-section">
+      <div class="background-blobs"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span>D</span><span>e</span><span>s</span><span>i</span><span>g</span
+          ><span>n</span><span>.</span><br />
+          <span>P</span><span>r</span><span>i</span><span>n</span><span>t</span
+          ><span>.</span><br />
+          <span>D</span><span>e</span><span>l</span><span>i</span><span>v</span
+          ><span>e</span><span>r</span><span>e</span><span>d</span><span>.</span>
+        </h1>
+      </div>
+    </section>
     <!-- About Section (id="about") -->
     <section class="about-section">
       <div class="content-wrapper">
@@ -206,8 +217,10 @@
         <p class="idea">
           Have an idea you think <br />
           we could help with?
+          <a href="contact.html" class="contact"
+            ><strong>Get in touch.</strong></a
+          >
         </p>
-        <p class="contact"><strong>Get in touch.</strong></p>
       </div>
     </section>
 
