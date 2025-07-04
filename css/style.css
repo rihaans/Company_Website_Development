@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Effra";
+  src: url("fonts/effra/effra.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -78,7 +85,7 @@ a {
 .hero-title {
   font-size: 5rem;
   font-weight: 900;
-  font-family: "Rubik", sans-serif;
+  font-family: "Effra", sans-serif;
   color: #2f2f2f;
   line-height: 1.2;
   display: inline-block;
@@ -117,7 +124,7 @@ a {
 }
 
 body {
-  font-family: "Rubik", sans-serif !important;
+  font-family: "Effra", sans-serif;
   background: #f4f4f4;
 }
 
@@ -167,7 +174,7 @@ body {
 }
 
 .brand-name {
-  font-family: "Rubik", sans-serif;
+  font-family: "Effra", sans-serif;
   font-weight: 700;
   font-size: 20px;
   color: #333;
@@ -177,6 +184,7 @@ body {
 .nav-links {
   display: flex;
   gap: 24px;
+  font-weight: bolder;
 }
 
 .nav-links a {
@@ -272,7 +280,7 @@ body {
 /* ================== Global Styles ================== */
 body {
   margin: 0;
-  font-family: "Rubik", sans-serif;
+  font-family: "Effra", sans-serif;
   background: #ffffff;
   color: #2f2f2f;
 }
@@ -286,7 +294,7 @@ body {
 
 h2 {
   font-size: 40px;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 
