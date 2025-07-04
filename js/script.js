@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       {
         title: "Packaging & Labelling",
-        desc: "Creative packaging that stands out on the shelf.",
+        desc: "We design and produce custom packaging and labels that not only protect your products but also enhance shelf appeal. From boxes and pouches to stickers and barcode labels, our solutions are functional, visually striking, and aligned with your brand identity.",
         mainImg: "images/package.jpg",
         gallery: ["images/package1.jpg", "images/package2.jpg"],
       },
