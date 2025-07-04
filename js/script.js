@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         title: "Design & Creations",
         desc: "From concept to creation, we deliver high-quality design and printing solutions tailored to your brand. Whether it’s business cards, brochures, flyers, or custom packaging, we bring your vision to life with creative designs and sharp print finishes that leave a lasting impression.",
-        mainImg: "images/designcreations.png",
+        mainImg: "images/advertisingsignage.png",
         gallery: [
           "images/Advertising and signage/1.png",
           "images/Advertising and signage/2.png",
