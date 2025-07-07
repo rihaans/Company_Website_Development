@@ -30,10 +30,3 @@ A responsive, multi-page website built using HTML, CSS, and JavaScript for **Baa
 The portfolio section is secured using OTP-based phone verification via Firebase Authentication. Only verified users can access this section.
 
 ---
-
-## 🚀 Getting Started
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/baab-advertising-site.git
-   cd baab-advertising-site
