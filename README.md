@@ -1,10 +1,10 @@
-# 🖥️ Company Website – Advertising
+#  Company Website – Advertising
 
 A responsive, multi-page website built using HTML, CSS, and JavaScript for **Baab Advertising**, a printing and advertising company based in the UAE. The site features service showcases, client details, and a contact form powered by Firebase.
 
 ---
 
-## 🔧 Tech Stack
+##  Tech Stack
 
 - **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
 - **Backend:** Firebase (Firestore & Authentication)
@@ -13,7 +13,7 @@ A responsive, multi-page website built using HTML, CSS, and JavaScript for **Baa
 
 ---
 
-## ✨ Features
+## Features
 
 - Fully responsive layout for desktop, tablet, and mobile
 - Smooth scroll animations using Lenis
